@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { layoutBreak } from "../../../functions/styles";
 import Content from "../../../components/Content";
+import GithubButton from "./GithubButton";
 
 const Container = styled.div`
   width: 100%;
@@ -153,6 +154,7 @@ const FeaturesPage = () => {
             <Cell key={index} feature={feature} reversed={index % 2 === 1} />
           ))}
         </Content>
+        <GithubButton/>
       </Container>
     </>
   );
