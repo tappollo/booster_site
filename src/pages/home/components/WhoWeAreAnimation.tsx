@@ -11,7 +11,7 @@ const WhoWeAreAnimation = () => {
       loop: true,
       autoplay: true,
       // @ts-ignore
-      assetsPath: "/lottie/who_we_are_images/",
+      assetsPath: "lottie/who_we_are_images/",
       rendererSettings: {
         viewBoxOnly: true
       }

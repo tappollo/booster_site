@@ -41,7 +41,7 @@ const benefits: Benefit[] = [
   },
   {
     animation: require("../../../assets/animations/benefits/04.json"),
-    assetPath: "/lottie/benefits_04_images/",
+    assetPath: "lottie/benefits_04_images/",
     title: "Off-the-shelf building blocks",
     subtitle:
       "Common components like SMS login, social login, chatting, video player, fast image processing etc have been integrated for you to assemble your business logics."
