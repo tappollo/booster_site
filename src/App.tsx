@@ -1,16 +1,3 @@
-import React from 'react';
-import './App.css';
-import {useMediaQuery} from "react-responsive";
+import HomePage from "./pages/home/HomePage";
 
-const App: React.FC = () => {
-  const isMobile = useMediaQuery({query: '(max-width: 1224px)'});
-
-  return (
-    <div className="App">
-      {isMobile ? <div>Mobile</div> : <div>Not Mobile</div>}
-    </div>
-  );
-};
-
-
-export default App;
+export default HomePage;
