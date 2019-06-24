@@ -33,7 +33,7 @@ const Title = styled.h4`
 const GithubButton = () => (
   <Container
     onClick={() => {
-      window.open("https://tappollo.github.com/booster", "_blank");
+      window.open("https://github.com/tappollo/booster", "_blank");
     }}
   >
     <Title>Source code available on Github</Title>
