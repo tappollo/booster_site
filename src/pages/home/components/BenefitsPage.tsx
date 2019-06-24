@@ -87,7 +87,7 @@ const Cell = (props: {
   }, [props.active]);
   return (
     <Cell.Container
-      style={{ opacity: props.active ? 1 : 0.3 }}
+      style={{ opacity: props.active ? 1 : 0.7 }}
       onMouseEnter={props.onFocus}
     >
       <Cell.Logo ref={ref} />

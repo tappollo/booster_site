@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { layoutBreak } from "../../../functions/styles";
+import Content from "../../../components/Content";
 
 const Container = styled.div`
   width: 100%;
@@ -60,37 +61,48 @@ const features: Feature[] = [
   }
 ];
 
-const Cell = (props: { feature: Feature }) => (
-  <Cell.Container>
+const Cell = (props: { reversed: boolean; feature: Feature }) => (
+  <Cell.Container reversed={props.reversed}>
     <Cell.Image image={props.feature.image} image2x={props.feature.image2x} />
-    <Cell.Title>{props.feature.title}</Cell.Title>
-    {props.feature.subtitle.split("\n").map((text, index) => (
-      <Cell.Subtitle key={index}>{text}</Cell.Subtitle>
-    ))}
+    <Cell.Info>
+      <Cell.Title reversed={props.reversed}>{props.feature.title}</Cell.Title>
+      {props.feature.subtitle.split("\n").map((text, index) => (
+        <Cell.Subtitle key={index} reversed={props.reversed}>
+          {text}
+        </Cell.Subtitle>
+      ))}
+    </Cell.Info>
   </Cell.Container>
 );
 
-Cell.Subtitle = styled.p`
+Cell.Info = styled.div`
+  @media (min-width: ${layoutBreak}px) {
+    flex: 1;
+  }
+`;
+
+Cell.Subtitle = styled.p<{ reversed: boolean }>`
   text-align: center;
   font-family: "SF Compact Display", sans-serif;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   @media (min-width: ${layoutBreak}px) {
-    text-align: left;
+    text-align: ${props => (props.reversed ? "right" : "left")};
     font-size: 15px;
   }
 `;
 
-Cell.Title = styled.h3`
+Cell.Title = styled.h3<{ reversed: boolean }>`
   text-align: center;
   font-family: "SF Compact Display", sans-serif;
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 16px;
   @media (min-width: ${layoutBreak}px) {
-    text-align: left;
-    font-size: 50px;
+    text-align: ${props => (props.reversed ? "right" : "left")};
+    font-weight: 600;
+    font-size: 27px;
   }
 `;
 
@@ -102,7 +114,7 @@ Cell.Image = styled.div<{ image: any; image2x: any }>`
   background-position: center;
   background-repeat: no-repeat;
   @media (min-width: ${layoutBreak}px) {
-    width: 500px;
+    flex: 2;
     height: 500px;
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -110,9 +122,13 @@ Cell.Image = styled.div<{ image: any; image2x: any }>`
   }
 `;
 
-Cell.Container = styled.div`
+Cell.Container = styled.div<{ reversed: boolean }>`
   align-items: center;
   margin-bottom: 90px;
+  @media (min-width: ${layoutBreak}px) {
+    justify-content: center;
+    flex-direction: ${props => (props.reversed ? "row-reverse" : "row")};
+  }
 `;
 
 const Title = styled.h1`
@@ -132,9 +148,11 @@ const FeaturesPage = () => {
     <>
       <Title>Prebuilt component</Title>
       <Container>
-        {features.map((feature, index) => (
-          <Cell key={index} feature={feature} />
-        ))}
+        <Content>
+          {features.map((feature, index) => (
+            <Cell key={index} feature={feature} reversed={index % 2 === 1} />
+          ))}
+        </Content>
       </Container>
     </>
   );
