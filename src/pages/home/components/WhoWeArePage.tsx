@@ -116,7 +116,7 @@ const GetStarted = styled.button`
   margin-bottom: 60px;
 `;
 
-const WhoWeAre = () => {
+const WhoWeArePage = () => {
   const mobileLayout = useMobileLayout();
   return (
     <Content>
@@ -152,4 +152,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default WhoWeArePage;

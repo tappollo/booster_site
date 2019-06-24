@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import WhoWeAre from "./components/WhoWeAre";
+import WhoWeArePage from "./components/WhoWeArePage";
 import BenefitsPage from "./components/BenefitsPage";
+import FeaturesPage from "./components/FeaturesPage";
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
 
 export default () => (
   <Container>
-    <WhoWeAre />
+    <WhoWeArePage />
     <BenefitsPage/>
+    <FeaturesPage />
   </Container>
 );
-
