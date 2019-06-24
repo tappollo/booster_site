@@ -6,6 +6,7 @@ import {
   useMobileLayout
 } from "../../../functions/styles";
 import styled, { css } from "styled-components";
+import WhoWeAreAnimation from "./WhoWeAreAnimation";
 
 const Container = styled.div`
   flex-direction: column;
@@ -33,9 +34,17 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  background-color: blue;
-  height: 500px;
-  ${even}
+  ${even};
+  padding-right: 20px;
+  padding-left: 20px;
+  @media (min-width: ${shrinkBreak}px) {
+    padding-right: 60px;
+    padding-left: 0;
+  }
+  @media (min-width: ${layoutBreak}px) and (max-width: ${shrinkBreak}px) {
+    padding-right: 30px;
+    padding-left: 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -45,7 +54,6 @@ const Title = styled.h1`
   letter-spacing: 2px;
   padding: 15px 20px 15px 0;
   text-transform: uppercase;
-  margin-right: 15px;
   @media (min-width: ${shrinkBreak}px) {
     font-size: 70px;
   }
@@ -57,15 +65,22 @@ const Title = styled.h1`
 const Header = styled.div`
   flex-direction: row;
   align-items: center;
+  margin-top: 100px;
+  @media (min-height: ${layoutBreak}) {
+    margin-top: 0;
+  }
 `;
 
 const PlatformImg = styled.img`
-  height: 30px;
   margin-right: 15px;
+  height: 20px;
+  @media (min-height: ${layoutBreak}) {
+    height: 30px;
+  }
 `;
 
-const Desc = () => (
-  <Desc.P>
+const Desc = (props: any) => (
+  <Desc.P {...props}>
     Scaffolding code, prebuilt UI components and integrated Cl/CD (continuous
     integration/continuous delivery) for rapid development in ios, Android and
     web. Booster helps you develop native apps for all platforms in half the
@@ -129,11 +144,13 @@ const WhoWeAre = () => {
             />
           </Header>
           {!mobileLayout && <Desc />}
-          <GetStarted>Get Started</GetStarted>
+          {!mobileLayout && <GetStarted>Get Started</GetStarted>}
         </Left>
         <div style={{ height: 30, width: 30 }} />
-        <Right />
-        {mobileLayout && <Desc />}
+        <Right>
+          <WhoWeAreAnimation />
+        </Right>
+        {mobileLayout && <Desc style={{ margin: 20 }} />}
       </Container>
     </Content>
   );

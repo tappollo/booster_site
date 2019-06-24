@@ -3,7 +3,7 @@ import React from "react";
 
 const Content = styled.div`
   align-self: center;
-  min-width: 350px;
+  min-width: 320px;
   max-width: 1224px;
   width: 100%;
 `;
