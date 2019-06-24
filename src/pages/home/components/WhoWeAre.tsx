@@ -1,10 +1,6 @@
 import Content from "../../../components/Content";
 import * as React from "react";
-import {
-  layoutBreak,
-  shrinkBreak,
-  useMobileLayout
-} from "../../../functions/styles";
+import { layoutBreak, shrinkBreak, useMobileLayout } from "../../../functions/styles";
 import styled, { css } from "styled-components";
 import WhoWeAreAnimation from "./WhoWeAreAnimation";
 
@@ -66,7 +62,7 @@ const Header = styled.div`
   flex-direction: row;
   align-items: center;
   margin-top: 100px;
-  @media (min-height: ${layoutBreak}) {
+  @media (min-width: ${layoutBreak}px) {
     margin-top: 0;
   }
 `;
@@ -74,7 +70,7 @@ const Header = styled.div`
 const PlatformImg = styled.img`
   margin-right: 15px;
   height: 20px;
-  @media (min-height: ${layoutBreak}) {
+  @media (min-width: ${layoutBreak}px) {
     height: 30px;
   }
 `;

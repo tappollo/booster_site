@@ -1,16 +1,12 @@
 import * as React from "react";
-import { useEffect } from "react";
-import styled from "styled-components";
+import { useEffect, useRef } from "react";
 import Lottie from "lottie-web";
 
-const Container = styled.div.attrs({
-  id: "who_we_are_animation"
-})``;
-
 const WhoWeAreAnimation = () => {
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     Lottie.loadAnimation({
-      container: document.getElementById("who_we_are_animation")!,
+      container: ref.current!,
       animationData: require("../../../assets/animations/who_we_are.json"),
       loop: true,
       autoplay: true,
@@ -21,7 +17,7 @@ const WhoWeAreAnimation = () => {
       }
     });
   }, []);
-  return <Container />;
+  return <div ref={ref} />;
 };
 
 export default WhoWeAreAnimation;
