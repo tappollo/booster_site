@@ -138,7 +138,7 @@ const Title = styled.h1`
   font-weight: 600;
   font-size: 30px;
   text-transform: uppercase;
-  margin: 50px 0;
+  margin: 70px 0 50px;
   @media (min-width: ${layoutBreak}px) {
     font-size: 50px;
   }

@@ -77,7 +77,7 @@ const Cell = (props: {
       // @ts-ignore
       assetsPath: props.benefit.assetPath
     });
-  }, []);
+  }, [props.benefit.assetPath, props.benefit.animation]);
   useEffect(() => {
     if (props.active) {
       animation.current!.goToAndPlay(0);
@@ -154,7 +154,7 @@ const BenefitsPage = () => {
     };
   }, [index]);
   return (
-    <Content>
+    <Content id="benefits">
       <Container
         style={{ minHeight: mobileLayout ? "none" : window.innerHeight }}
       >

@@ -140,7 +140,15 @@ const WhoWeArePage = () => {
             />
           </Header>
           {!mobileLayout && <Desc />}
-          {!mobileLayout && <GetStarted>Get Started</GetStarted>}
+          {!mobileLayout && (
+            <GetStarted
+              onClick={() =>
+                document.getElementById("benefits")!.scrollIntoView(true)
+              }
+            >
+              Get Started
+            </GetStarted>
+          )}
         </Left>
         <div style={{ height: 30, width: 30 }} />
         <Right>
