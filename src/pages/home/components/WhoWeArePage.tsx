@@ -78,9 +78,9 @@ const PlatformImg = styled.img`
 const Desc = (props: any) => (
   <Desc.P {...props}>
     Scaffolding code, prebuilt UI components and integrated Cl/CD (continuous
-    integration/continuous delivery) for rapid development in ios, Android and
+    integration/continuous delivery) for rapid development in iOS, Android and
     web. Booster helps you develop native apps for all platforms in half the
-    time and half the manpower
+    time and half the manpower.
   </Desc.P>
 );
 

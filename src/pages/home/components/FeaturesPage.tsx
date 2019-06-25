@@ -147,7 +147,7 @@ const Title = styled.h1`
 const FeaturesPage = () => {
   return (
     <>
-      <Title>Prebuilt component</Title>
+      <Title>Prebuilt components</Title>
       <Container>
         <Content>
           {features.map((feature, index) => (

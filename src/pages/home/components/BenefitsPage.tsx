@@ -23,40 +23,63 @@ interface Benefit {
 const benefits: Benefit[] = [
   {
     animation: require("../../../assets/animations/benefits/01.json"),
-    title: "Running APP on Day 1",
+    title: "Fully functional app in minutes",
     subtitle:
-      "Fork the Booster Repo, run the configuration scrips and build, you can get running APPs and start to focus on developing business logics."
+      "Get a fully functional app with common features such\n" +
+      "as social login, sign up, settings, push notifications\n" +
+      "and many more in minutes, so you can focus on the\n" +
+      "things that differentiate your app from the rest\n" +
+      "immediately."
   },
   {
     animation: require("../../../assets/animations/benefits/02.json"),
-    title: "Native and Web in one shot",
+    title: "The Power of Native Web",
     subtitle:
-      "Write code once, you will have the APP in iOS, Android and Mobile Web, save both your time and efforts."
+      "Develop and deploy your ioS and Android apps\n" +
+      "using React Native. You can even preview your app\n" +
+      "in your web browser without having to install the\n" +
+      "app. It feels like magic"
   },
   {
     animation: require("../../../assets/animations/benefits/03.json"),
-    title: "See the APP one browser away",
+    title: "Over the air update",
     subtitle:
-      "With the mobile web, you can test look and feel, business logic without testing devices, delivery the APP without the hurtles of APP installation."
+      "Release incremental updates and fixes to your app\n" +
+      "without having to resubmit your app. Did we say it felt\n" +
+      "like magic?"
   },
   {
     animation: require("../../../assets/animations/benefits/04.json"),
     assetPath: "lottie/benefits_04_images/",
-    title: "Off-the-shelf building blocks",
+    title: "Prebuilt components",
     subtitle:
-      "Common components like SMS login, social login, chatting, video player, fast image processing etc have been integrated for you to assemble your business logics."
+      "Booster comes with prebuilt components such as\n" +
+      "SMS login, social login, text chat, video player, image\n" +
+      "processing services, etc so you can build your app in\n" +
+      "unprecedented speed at a fraction of the cost."
   },
   {
     animation: require("../../../assets/animations/benefits/05.json"),
-    title: "No DevOps in the house? We get you covered!",
+    title: "Cl/CD integrations",
     subtitle:
-      "Pre-build continuously integration pipeline and continuously delivery infrastructures enables short time to market and fast customer feedback."
+      "No DevOps in the house? We got you covered. Booster\n" +
+      "comes with pre-built continuous integration (CI)\n" +
+      "pipeline and continuous delivery (CD) infrastructures\n" +
+      "Your code base get the lint check and unit test\n" +
+      "treatments it deserves. Booster automates the\n" +
+      "uploading of pre-release builds to Hockey and release\n" +
+      "builds to the App Store and Google Play"
   },
   {
     animation: require("../../../assets/animations/benefits/06.json"),
-    title: "Power-packed Backend-as-a-Service",
+    title: "Scalability, analytics, A/B testing\n" +
+      "crash reporting from day one",
     subtitle:
-      "With FireBase, you will get scalability, crash report, data analysis, futuristic APP development features in one place.0"
+      "Have to serve 100,000 users on day one? Not a\n" +
+      "problem. Booster leverages the power of Google Cloud\n" +
+      "and Firebase to provide you with scalability and myriad\n" +
+      "of features (analytics, A/B testing, crash reporting\n" +
+      "etc.) from day one"
   }
 ];
 
@@ -93,7 +116,7 @@ const Cell = (props: {
       <Cell.Logo ref={ref} />
       <div style={{ flex: 1 }}>
         <Cell.Title>{props.benefit.title}</Cell.Title>
-        <Cell.Subtitle>{props.benefit.subtitle}</Cell.Subtitle>
+        <Cell.Subtitle>{props.benefit.subtitle.replace('\n', ' ')}</Cell.Subtitle>
       </div>
     </Cell.Container>
   );
