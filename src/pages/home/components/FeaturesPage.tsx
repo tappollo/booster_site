@@ -23,40 +23,41 @@ const features: Feature[] = [
   {
     title: "Sign Up/ Login",
     subtitle:
-      "Sign up and login via email social media\n(Facebook and Google) and phone number",
+      "Sign up and login via email social media\n(Facebook and Google) and phone number.",
     image: require("../../../assets/features/login.png"),
     image2x: require("../../../assets/features/login@2x.png")
   },
   {
     title: "Text chat",
     subtitle:
-      "Full chat functionality implemented\nfor both frontend and backend",
+      "Full chat functionality implemented\nfor both frontend and backend.",
     image: require("../../../assets/features/chat.png"),
     image2x: require("../../../assets/features/chat@2x.png")
   },
   {
     title: "Settings",
-    subtitle: "A place to manage your app settings",
+    subtitle: "A place to manage your app settings.",
     image: require("../../../assets/features/settings.png"),
     image2x: require("../../../assets/features/settings@2x.png")
   },
   {
     title: "Image Upload/ Download",
     subtitle:
-      "Highly optimized and fast image upload and\ndownload functionalities with automatic\nthumbnail generation",
+      "Highly optimized and fast image upload and\ndownload functionalities with automatic\nthumbnail generation.",
     image: require("../../../assets/features/image.png"),
     image2x: require("../../../assets/features/image@2x.png")
   },
   {
     title: "Video Player",
-    subtitle: "A full featured video player",
+    subtitle: "A full featured video player.",
     image: require("../../../assets/features/video.png"),
     image2x: require("../../../assets/features/video@2x.png")
   },
   {
     title: "Coming Soon",
     subtitle:
-      "Live streaming, deeplinking\npayment integration, Privacy Policy\nand TOS etc",
+      "Live streaming, deep linking\n" +
+      "payment integration, Privacy Policy, Terms of Service, etc.",
     image: require("../../../assets/features/coming.png"),
     image2x: require("../../../assets/features/coming@2x.png")
   }

@@ -38,7 +38,7 @@ const benefits: Benefit[] = [
       "Develop and deploy your ioS and Android apps\n" +
       "using React Native. You can even preview your app\n" +
       "in your web browser without having to install the\n" +
-      "app. It feels like magic"
+      "app. It feels like magic."
   },
   {
     animation: require("../../../assets/animations/benefits/03.json"),
@@ -68,7 +68,7 @@ const benefits: Benefit[] = [
       "Your code base get the lint check and unit test\n" +
       "treatments it deserves. Booster automates the\n" +
       "uploading of pre-release builds to Hockey and release\n" +
-      "builds to the App Store and Google Play"
+      "builds to the App Store and Google Play."
   },
   {
     animation: require("../../../assets/animations/benefits/06.json"),
@@ -79,7 +79,7 @@ const benefits: Benefit[] = [
       "problem. Booster leverages the power of Google Cloud\n" +
       "and Firebase to provide you with scalability and myriad\n" +
       "of features (analytics, A/B testing, crash reporting\n" +
-      "etc.) from day one"
+      "etc.) from day one."
   }
 ];
 
