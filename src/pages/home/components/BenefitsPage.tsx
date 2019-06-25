@@ -149,6 +149,7 @@ Cell.Logo = styled.div`
   height: 110px;
   @media (min-width: ${layoutBreak}px) {
     margin-right: 30px;
+    margin-bottom: 0;
   }
 `;
 
