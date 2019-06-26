@@ -35,7 +35,7 @@ const benefits: Benefit[] = [
     animation: require("../../../assets/animations/benefits/02.json"),
     title: "The Power of Native Web",
     subtitle:
-      "Develop and deploy your ioS and Android apps\n" +
+      "Develop and deploy your iOS and Android apps\n" +
       "using React Native. You can even preview your app\n" +
       "in your web browser without having to install the\n" +
       "app. It feels like magic."

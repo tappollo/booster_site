@@ -41,7 +41,7 @@ const features: Feature[] = [
     image2x: require("../../../assets/features/settings@2x.png")
   },
   {
-    title: "Image Upload/ Download",
+    title: "Image Upload/Download",
     subtitle:
       "Highly optimized and fast image upload and\ndownload functionalities with automatic\nthumbnail generation.",
     image: require("../../../assets/features/image.png"),
