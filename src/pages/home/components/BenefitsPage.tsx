@@ -72,8 +72,8 @@ const benefits: Benefit[] = [
   },
   {
     animation: require("../../../assets/animations/benefits/06.json"),
-    title: "Scalability, analytics, A/B testing,\n" +
-      "crash reporting from day one",
+    title:
+      "Scalability, analytics, A/B testing,\n" + "crash reporting from day one",
     subtitle:
       "Have to serve 100,000 users on day one? Not a\n" +
       "problem. Booster leverages the power of Google Cloud\n" +
@@ -92,11 +92,13 @@ const Cell = (props: {
   const animation = useRef<ReturnType<typeof Lottie.loadAnimation> | null>(
     null
   );
+  const mobileLayout = useMobileLayout();
   useEffect(() => {
     animation.current = Lottie.loadAnimation({
       container: ref.current!,
       animationData: props.benefit.animation,
       autoplay: false,
+      loop: mobileLayout,
       // @ts-ignore
       assetsPath: props.benefit.assetPath
     });
@@ -116,7 +118,9 @@ const Cell = (props: {
       <Cell.Logo ref={ref} />
       <div style={{ flex: 1 }}>
         <Cell.Title>{props.benefit.title}</Cell.Title>
-        <Cell.Subtitle>{props.benefit.subtitle.replace('\n', ' ')}</Cell.Subtitle>
+        <Cell.Subtitle>
+          {props.benefit.subtitle.replace("\n", " ")}
+        </Cell.Subtitle>
       </div>
     </Cell.Container>
   );
