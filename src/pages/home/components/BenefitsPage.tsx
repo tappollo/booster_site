@@ -60,7 +60,7 @@ const benefits: Benefit[] = [
   },
   {
     animation: require("../../../assets/animations/benefits/05.json"),
-    title: "Cl/CD integrations",
+    title: "CI/CD integrations",
     subtitle:
       "No DevOps in the house? We got you covered. Booster\n" +
       "comes with pre-built continuous integration (CI)\n" +
