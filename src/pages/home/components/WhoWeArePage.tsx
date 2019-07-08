@@ -3,6 +3,7 @@ import * as React from "react";
 import { layoutBreak, shrinkBreak, useMobileLayout } from "../../../functions/styles";
 import styled, { css } from "styled-components";
 import WhoWeAreAnimation from "./WhoWeAreAnimation";
+import NavigationRow from "./NavigationRow";
 
 const Container = styled.div`
   flex-direction: column;
@@ -61,7 +62,7 @@ const Title = styled.h1`
 const Header = styled.div`
   flex-direction: row;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 30px;
   @media (min-width: ${layoutBreak}px) {
     margin-top: 0;
   }
@@ -99,20 +100,18 @@ Desc.P = styled.p`
   }
 `;
 
-const GetStarted = styled.button`
+const GetStarted = styled.a`
   width: 240px;
   height: 60px;
+  line-height: 60px;
   font-family: "SF Compact Display", sans-serif;
   background-color: #ffb000;
   margin-top: 15px;
-  border-radius: 8px;
   color: white;
   font-size: 27px;
   font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  text-align: center;
   margin-bottom: 60px;
 `;
 
@@ -120,8 +119,9 @@ const WhoWeArePage = () => {
   const mobileLayout = useMobileLayout();
   return (
     <Content>
+      <NavigationRow />
       <Container
-        style={{ minHeight: mobileLayout ? "none" : window.innerHeight }}
+        style={{ minHeight: mobileLayout ? "none" : window.innerHeight - 80 }}
       >
         <Left>
           <Header>
@@ -142,11 +142,10 @@ const WhoWeArePage = () => {
           {!mobileLayout && <Desc />}
           {!mobileLayout && (
             <GetStarted
-              onClick={() =>
-                document.getElementById("benefits")!.scrollIntoView(true)
-              }
+              href="https://tappollo.github.io/booster"
+              target="_blank"
             >
-              Get Started
+              Documentation
             </GetStarted>
           )}
         </Left>

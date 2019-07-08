@@ -147,7 +147,7 @@ const Title = styled.h1`
 
 const FeaturesPage = () => {
   return (
-    <>
+    <div id="features">
       <Title>Prebuilt components</Title>
       <Container>
         <Content>
@@ -157,7 +157,7 @@ const FeaturesPage = () => {
         </Content>
         <GithubButton/>
       </Container>
-    </>
+    </div>
   );
 };
 
