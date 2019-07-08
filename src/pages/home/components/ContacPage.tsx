@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import React from "react";
+import { layoutBreak } from "../../../functions/styles";
 
 const Container = styled.div`
   align-items: center;
-  padding-bottom: 100px;
+  padding: 0 20px;
+  margin-bottom: 100px;
 `;
 
 const Title = styled.h3`
@@ -22,14 +24,18 @@ const Company = styled.img.attrs({
   src: require("../../../assets/images/company.png"),
   alt: "Tappollo"
 })`
-  width: 122px;
-  margin-right: 30px;
+  width: 80px;
+  margin-right: 15px;
+  @media (min-width: ${layoutBreak}px) {
+    width: 122px;
+    margin-right: 30px;
+  }
 `;
 
 const Name = styled.h3`
   font-family: "Barlow Condensed", sans-serif;
   font-size: 60px;
-  height: 80px;
+  line-height: 70px;
   color: #e85a4a;
   text-transform: uppercase;
 `;

@@ -109,8 +109,8 @@ Cell.Title = styled.h3<{ reversed: boolean }>`
 
 Cell.Image = styled.div<{ image: any; image2x: any }>`
   background-image: ${props => `url(${props.image})`};
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

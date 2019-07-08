@@ -6,7 +6,7 @@ import WhoWeAreAnimation from "./WhoWeAreAnimation";
 import NavigationRow from "./NavigationRow";
 
 const Container = styled.div`
-  flex-direction: column;
+  flex-direction: column-reverse;
   @media (min-width: ${layoutBreak}px) {
     align-items: center;
     flex-direction: row;
@@ -59,7 +59,25 @@ const Title = styled.h1`
   }
 `;
 
-const Header = styled.div`
+const Header = () => (
+  <Header.Container>
+    <Title>Booster</Title>
+    <PlatformImg
+      src={require("../../../assets/images/ios.png")}
+      alt="Platform iOS"
+    />
+    <PlatformImg
+      src={require("../../../assets/images/android.png")}
+      alt="Platform Android"
+    />
+    <PlatformImg
+      src={require("../../../assets/images/web.png")}
+      alt="Platform Web"
+    />
+  </Header.Container>
+);
+
+Header.Container = styled.div`
   flex-direction: row;
   align-items: center;
   margin-top: 30px;
@@ -101,18 +119,59 @@ Desc.P = styled.p`
 `;
 
 const GetStarted = styled.a`
-  width: 240px;
-  height: 60px;
-  line-height: 60px;
   font-family: "SF Compact Display", sans-serif;
   background-color: #ffb000;
-  margin-top: 15px;
+  margin: 15px 0 30px;
   color: white;
-  font-size: 27px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  margin-bottom: 60px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  @media (min-width: ${shrinkBreak}px) {
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 27px;
+  }
+`;
+
+const Github = () => (
+  <Github.Container
+    onClick={() => {
+      window.open("https://github.com/tappollo/booster", "_blank");
+    }}
+  >
+    Source code available on
+    <Github.Img />
+    <Github.Title>GitHub</Github.Title>
+  </Github.Container>
+);
+
+Github.Img = styled.img.attrs({
+  src: require("../../../assets/images/Github.png"),
+  alt: "GitHub"
+})`
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+`;
+
+Github.Title = styled.div`
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+`;
+
+Github.Container = styled.div`
+  margin-bottom: 40px;
+  flex-direction: row;
+  align-items: center;
+  font-family: "SF Compact Display", sans-serif;
+  font-size: 15px;
 `;
 
 const WhoWeArePage = () => {
@@ -124,36 +183,18 @@ const WhoWeArePage = () => {
         style={{ minHeight: mobileLayout ? "none" : window.innerHeight - 80 }}
       >
         <Left>
-          <Header>
-            <Title>Booster</Title>
-            <PlatformImg
-              src={require("../../../assets/images/ios.png")}
-              alt="Platform iOS"
-            />
-            <PlatformImg
-              src={require("../../../assets/images/android.png")}
-              alt="Platform Android"
-            />
-            <PlatformImg
-              src={require("../../../assets/images/web.png")}
-              alt="Platform Web"
-            />
-          </Header>
-          {!mobileLayout && <Desc />}
-          {!mobileLayout && (
-            <GetStarted
-              href="https://tappollo.github.io/booster"
-              target="_blank"
-            >
-              Documentation
-            </GetStarted>
-          )}
+          {!mobileLayout && <Header />}
+          <Desc />
+          <GetStarted href="https://tappollo.github.io/booster" target="_blank">
+            Documentation
+          </GetStarted>
+          <Github />
         </Left>
         <div style={{ height: 30, width: 30 }} />
         <Right>
+          {mobileLayout && <Header />}
           <WhoWeAreAnimation />
         </Right>
-        {mobileLayout && <Desc style={{ margin: 20 }} />}
       </Container>
     </Content>
   );
