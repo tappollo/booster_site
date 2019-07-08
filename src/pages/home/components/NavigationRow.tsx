@@ -34,6 +34,7 @@ const Title = styled.div`
 const Button = styled.div`
   font-family: "SF Compact Display", sans-serif;
   margin-left: 60px;
+  font-size: 16px;
   cursor: pointer;
 `;
 
@@ -68,7 +69,7 @@ const NavigationRow = () => {
           })
         }
       >
-        Contact US
+        Contact us
       </Button>
     </Container>
   );
