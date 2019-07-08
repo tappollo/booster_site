@@ -2,9 +2,8 @@ import styled from "styled-components";
 import React from "react";
 import { layoutBreak } from "../../../functions/styles";
 import Content from "../../../components/Content";
-import GithubButton from "./GithubButton";
 
-const Container = styled.div`
+export const ImageBackground = styled.div`
   width: 100%;
   background-size: contain;
   background-repeat: repeat-y;
@@ -133,7 +132,7 @@ Cell.Container = styled.div<{ reversed: boolean }>`
   }
 `;
 
-const Title = styled.h1`
+export const SectionTitle = styled.h1`
   align-self: center;
   font-family: "SF Compact Display", sans-serif;
   font-weight: 600;
@@ -147,17 +146,11 @@ const Title = styled.h1`
 
 const FeaturesPage = () => {
   return (
-    <div id="features">
-      <Title>Prebuilt components</Title>
-      <Container>
-        <Content>
-          {features.map((feature, index) => (
-            <Cell key={index} feature={feature} reversed={index % 2 === 1} />
-          ))}
-        </Content>
-        <GithubButton/>
-      </Container>
-    </div>
+    <Content id="features">
+      {features.map((feature, index) => (
+        <Cell key={index} feature={feature} reversed={index % 2 === 1} />
+      ))}
+    </Content>
   );
 };
 

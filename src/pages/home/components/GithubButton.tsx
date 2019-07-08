@@ -6,7 +6,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   padding: 20px;
-  margin: 100px 0;
+  margin: 30px 0 100px;
   align-items: center;
   cursor: pointer;
 `;

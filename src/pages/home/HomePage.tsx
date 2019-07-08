@@ -1,12 +1,19 @@
 import React from "react";
 import WhoWeArePage from "./components/WhoWeArePage";
 import BenefitsPage from "./components/BenefitsPage";
-import FeaturesPage from "./components/FeaturesPage";
+import FeaturesPage, { ImageBackground, SectionTitle } from "./components/FeaturesPage";
+import ContactPage from "./components/ContacPage";
+import GithubButton from "./components/GithubButton";
 
 export default () => (
   <div>
     <WhoWeArePage />
     <BenefitsPage />
-    <FeaturesPage />
+    <SectionTitle>Prebuilt components</SectionTitle>
+    <ImageBackground>
+      <FeaturesPage />
+      <GithubButton />
+      <ContactPage />
+    </ImageBackground>
   </div>
 );

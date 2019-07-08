@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import React from "react";
-import { layoutBreak } from "../../../functions/styles";
+import { layoutBreak, shrinkBreak } from "../../../functions/styles";
 
 const Container = styled.div`
   flex-direction: row;
-  height: 50px;
+  height: 80px;
   display: none;
   align-items: center;
-  padding-left: 35px;
-  @media (min-width: ${layoutBreak}px) {
-    height: 80px;
+  padding: 0 20px;
+  @media (min-width: ${shrinkBreak}px) {
     display: flex;
+    padding: 0 60px;
+  }
+  @media (min-width: ${layoutBreak}px) and (max-width: ${shrinkBreak}px) {
+    display: flex;
+    padding: 0 30px;
   }
 `;
 
@@ -29,7 +33,7 @@ const Title = styled.div`
 
 const Button = styled.div`
   font-family: "SF Compact Display", sans-serif;
-  margin-right: 60px;
+  margin-left: 60px;
   cursor: pointer;
 `;
 
@@ -54,8 +58,18 @@ const NavigationRow = () => {
             behavior: "smooth"
           })
         }
-      >Features</Button>
-      <Button>Contact US</Button>
+      >
+        Features
+      </Button>
+      <Button
+        onClick={() =>
+          document.getElementById("contacts")!.scrollIntoView({
+            behavior: "smooth"
+          })
+        }
+      >
+        Contact US
+      </Button>
     </Container>
   );
 };
