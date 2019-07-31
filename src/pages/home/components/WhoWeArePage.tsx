@@ -215,6 +215,7 @@ PowerBy.Firebase = styled.img.attrs({
 const WithWithoutBooster = () => {
   return (
     <WithWithoutBooster.Container>
+      <WithWithoutBooster.Background />
       <WithWithoutBooster.Row>
         <WithWithoutBooster.Head>
           <WithWithoutBooster.Square style={{ backgroundColor: "#660C6E" }} />
@@ -237,10 +238,20 @@ const WithWithoutBooster = () => {
   );
 };
 
-WithWithoutBooster.Container = styled.div`
-  flex-direction: column;
+WithWithoutBooster.Background = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
-  margin: 0px -20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(3);
+`;
+
+WithWithoutBooster.Container = styled.div`
+  position: relative;
+  flex-direction: column;
+  margin: 0;
   padding: 20px;
   @media (min-width: ${layoutBreak}px) {
     flex-direction: row;

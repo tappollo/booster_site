@@ -6,7 +6,7 @@ import ContactPage from "./components/ContacPage";
 import GithubButton from "./components/GithubButton";
 
 export default () => (
-  <div>
+  <div style={{overflow: 'hidden'}}>
     <WhoWeArePage />
     <BenefitsPage />
     <SectionTitle>Prebuilt components</SectionTitle>
