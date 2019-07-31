@@ -84,7 +84,7 @@ Cell.Info = styled.div`
 
 Cell.Subtitle = styled.p<{ reversed: boolean }>`
   text-align: center;
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
@@ -96,7 +96,7 @@ Cell.Subtitle = styled.p<{ reversed: boolean }>`
 
 Cell.Title = styled.h3<{ reversed: boolean }>`
   text-align: center;
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 16px;
@@ -134,7 +134,7 @@ Cell.Container = styled.div<{ reversed: boolean }>`
 
 export const SectionTitle = styled.h1`
   align-self: center;
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: 600;
   font-size: 30px;
   text-transform: uppercase;

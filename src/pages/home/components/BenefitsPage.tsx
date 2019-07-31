@@ -130,7 +130,7 @@ const Cell = (props: {
 };
 
 Cell.Subtitle = styled.p`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-size: 15px;
   text-align: center;
   @media (min-width: ${layoutBreak}px) {
@@ -139,7 +139,7 @@ Cell.Subtitle = styled.p`
 `;
 
 Cell.Title = styled.h2`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 5px;

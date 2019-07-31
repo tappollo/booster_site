@@ -24,7 +24,7 @@ const Icon = styled.img.attrs({
 `;
 
 const Title = styled.h4`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: 600;
   margin-right: 30px;
   text-align: right;

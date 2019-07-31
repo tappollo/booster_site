@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: 600;
   font-size: 50px;
   margin-bottom: 80px;
@@ -42,7 +42,7 @@ const Name = styled.h3`
 
 const Info = styled.p`
   font-size: 20px;
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   line-height: 26px;
   a {
     color: white;
