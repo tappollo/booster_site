@@ -181,8 +181,10 @@ const PowerBy = () => {
     <PowerBy.Container>
       <PowerBy.Text>Powered by&nbsp;&nbsp;&nbsp;</PowerBy.Text>
       <PowerBy.React />
-      <PowerBy.Text>&nbsp;&nbsp;&&nbsp;&nbsp;</PowerBy.Text>
+      <PowerBy.ReactText>React Native</PowerBy.ReactText>
+      <PowerBy.Text>&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp;</PowerBy.Text>
       <PowerBy.Firebase />
+      <PowerBy.FirebaseText>Firebase</PowerBy.FirebaseText>
     </PowerBy.Container>
   );
 };
@@ -190,27 +192,48 @@ const PowerBy = () => {
 PowerBy.Container = styled.div`
   flex-direction: row;
   margin: 30px 0;
+  align-items: center;
 `;
 
 PowerBy.Text = styled.span`
   font-family: "Hind Guntur", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   color: #ffffff;
 `;
+PowerBy.ReactText = styled.span`
+  font-family: "Hind Guntur", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #5bcef0;
+  letter-spacing: 0.15px;
+`;
 PowerBy.React = styled.img.attrs({
-  src: require("../../../assets/images/react-native-icon@3x.png"),
-  width: 125,
-  height: 21,
+  src: require("../../../assets/images/react-logo@3x.png"),
   alt: "React"
-})``;
+})`
+  width: 24px;
+  height: 21px;
+  margin-right: 8px;
+  transform: translate(0px, -4px);
+`;
 
+PowerBy.FirebaseText = styled.span`
+  font-family: "Hind Guntur", sans-serif;
+  font-size: 15px;
+  color: #ffca2a;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+`;
 PowerBy.Firebase = styled.img.attrs({
-  src: require("../../../assets/images/firebase-icon@3x.png"),
-  width: 80,
-  height: 21,
+  src: require("../../../assets/images/firebase-logo@3x.png"),
   alt: "Firebase"
-})``;
+})`
+  width: 19px;
+  height: 25px;
+  transform: translate(0px, -4px);
+  margin-right: 8px;
+`;
 
 const WithWithoutBooster = () => {
   return (
