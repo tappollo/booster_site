@@ -215,7 +215,7 @@ PowerBy.React = styled.img.attrs({
   width: 24px;
   height: 21px;
   margin-right: 8px;
-  transform: translate(0px, -4px);
+  transform: translate(0px, -3px);
 `;
 
 PowerBy.FirebaseText = styled.span`
@@ -299,14 +299,14 @@ WithWithoutBooster.Square = styled.div`
 WithWithoutBooster.TitleWith = styled.span`
   font-family: "HindGuntur", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
   color: #ff00c9;
   letter-spacing: 0.41px;
 `;
 WithWithoutBooster.TitleWithout = styled.span`
   font-family: "HindGuntur", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 26px;
   opacity: 0.62;
   color: #b620e0;
   letter-spacing: 0.29px;
