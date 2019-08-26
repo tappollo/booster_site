@@ -15,9 +15,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           version: 10
-      - name: build
-        run: |
-          yarn install
-          yarn deploy
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@ghtoken
         env:
+          FOLDER: build
+          BUILD_SCRIPT: yarn install && yarn build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
