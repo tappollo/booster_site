@@ -102,14 +102,19 @@ const Desc = (props: any) => (
 
 Desc.P = styled.p`
   font-family: "Hind Guntur", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 16px;
   margin-bottom: 15px;
+  line-height: 18px;
   @media (min-width: ${shrinkBreak}px) {
     font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
   }
   @media (min-width: ${layoutBreak}px) and (max-width: ${shrinkBreak}px) {
     font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
   }
 `;
 
