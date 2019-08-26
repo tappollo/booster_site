@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { layoutBreak, shrinkBreak } from "../../../functions/styles";
+import Content from "../../../components/Content";
 
 const Container = styled.div`
   flex-direction: row;
@@ -38,40 +39,51 @@ const Button = styled.div`
   cursor: pointer;
 `;
 
+const MakeItFloat = styled.div`
+  width: 100%;
+  background-color:#001d47;
+  position: fixed;
+  z-index: 1000;
+`;
+
 const NavigationRow = () => {
   return (
-    <Container>
-      <Logo />
-      <Title>BOOSTER</Title>
-      <div style={{ flex: 1 }} />
-      <Button
-        onClick={() =>
-          document.getElementById("benefits")!.scrollIntoView({
-            behavior: "smooth"
-          })
-        }
-      >
-        Benefits
-      </Button>
-      <Button
-        onClick={() =>
-          document.getElementById("features")!.scrollIntoView({
-            behavior: "smooth"
-          })
-        }
-      >
-        Features
-      </Button>
-      <Button
-        onClick={() =>
-          document.getElementById("contacts")!.scrollIntoView({
-            behavior: "smooth"
-          })
-        }
-      >
-        Contact us
-      </Button>
-    </Container>
+    <MakeItFloat>
+      <Content>
+        <Container>
+          <Logo />
+          <Title>BOOSTER</Title>
+          <div style={{ flex: 1 }} />
+          <Button
+            onClick={() =>
+              document.getElementById("benefits")!.scrollIntoView({
+                behavior: "smooth"
+              })
+            }
+          >
+            Benefits
+          </Button>
+          <Button
+            onClick={() =>
+              document.getElementById("features")!.scrollIntoView({
+                behavior: "smooth"
+              })
+            }
+          >
+            Features
+          </Button>
+          <Button
+            onClick={() =>
+              document.getElementById("contacts")!.scrollIntoView({
+                behavior: "smooth"
+              })
+            }
+          >
+            Contact us
+          </Button>
+        </Container>
+      </Content>
+    </MakeItFloat>
   );
 };
 

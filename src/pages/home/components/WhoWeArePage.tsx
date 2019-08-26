@@ -3,7 +3,6 @@ import * as React from "react";
 import { layoutBreak, shrinkBreak, useMobileLayout } from "../../../functions/styles";
 import styled, { css } from "styled-components";
 import WhoWeAreAnimation from "./WhoWeAreAnimation";
-import NavigationRow from "./NavigationRow";
 
 const Container = styled.div`
   flex-direction: column-reverse;
@@ -324,9 +323,11 @@ const WhoWeArePage = () => {
   const mobileLayout = useMobileLayout();
   return (
     <Content>
-      <NavigationRow />
       <Container
-        style={{ minHeight: mobileLayout ? "none" : window.innerHeight - 40 }}
+        style={{
+          minHeight: mobileLayout ? "none" : window.innerHeight - 40,
+          marginTop: mobileLayout ? 0 : 40
+        }}
       >
         <Left>
           {!mobileLayout && <Header />}

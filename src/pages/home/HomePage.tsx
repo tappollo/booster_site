@@ -4,9 +4,11 @@ import BenefitsPage from "./components/BenefitsPage";
 import FeaturesPage, { ImageBackground, SectionTitle } from "./components/FeaturesPage";
 import ContactPage from "./components/ContacPage";
 import GithubButton from "./components/GithubButton";
+import NavigationRow from "./components/NavigationRow";
 
 export default () => (
   <div>
+    <NavigationRow />
     <WhoWeArePage />
     <WithWithoutBooster />
     <BenefitsPage />
