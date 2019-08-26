@@ -104,8 +104,13 @@ const Cell = (props: {
     });
     return () => {
       Lottie.destroy(props.benefit.title);
-    }
-  }, [props.benefit.assetPath, props.benefit.animation, mobileLayout]);
+    };
+  }, [
+    props.benefit.assetPath,
+    props.benefit.animation,
+    props.benefit.title,
+    mobileLayout
+  ]);
   useEffect(() => {
     if (props.active) {
       animation.current!.goToAndPlay(0);

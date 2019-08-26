@@ -1,10 +1,6 @@
 import Content from "../../../components/Content";
 import * as React from "react";
-import {
-  layoutBreak,
-  shrinkBreak,
-  useMobileLayout
-} from "../../../functions/styles";
+import { layoutBreak, shrinkBreak, useMobileLayout } from "../../../functions/styles";
 import styled, { css } from "styled-components";
 import WhoWeAreAnimation from "./WhoWeAreAnimation";
 import NavigationRow from "./NavigationRow";
@@ -128,12 +124,12 @@ const GetStarted = styled.a`
   text-align: center;
   width: 200px;
   height: 50px;
-  line-height: 50px;
+  line-height: 56px;
   font-size: 23px;
   @media (min-width: ${shrinkBreak}px) {
     width: 240px;
     height: 60px;
-    line-height: 60px;
+    line-height: 66px;
     font-size: 27px;
   }
 `;
