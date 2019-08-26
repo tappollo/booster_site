@@ -148,6 +148,7 @@ Cell.Title = styled.h2`
   font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: 24px;
+  line-height: 30px;
   margin-bottom: 5px;
   text-align: center;
   @media (min-width: ${layoutBreak}px) {
