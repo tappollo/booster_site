@@ -19,5 +19,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@ghtoken
         env:
           FOLDER: build
+          BRANCH: gh-pages
           BUILD_SCRIPT: yarn install && yarn build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
