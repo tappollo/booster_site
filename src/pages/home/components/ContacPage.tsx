@@ -58,8 +58,8 @@ const ContactPage = () => {
         <Company />
         <div>
           <Name>Tappollo media</Name>
-          <Info>85 Broad street. 27-107</Info>
-          <Info>New York NY 10004</Info>
+          <Info>85 Broad Street, Suite 27-107</Info>
+          <Info>New York, NY 10004</Info>
           <Info>
             <a href="mailto:general@tappollo.com">general@tappollo.com</a>
           </Info>
