@@ -34,19 +34,28 @@ const Company = styled.img.attrs({
 
 const Name = styled.h3`
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   line-height: 70px;
   color: #e85a4a;
   text-transform: uppercase;
+  @media (min-width: ${layoutBreak}px) {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Info = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Hind Guntur", sans-serif;
-  line-height: 26px;
+  margin: 3px 0;
+  line-height: 1em;
   a {
     color: white;
     text-decoration: none;
+  }
+  @media (min-width: ${layoutBreak}px) {
+    font-size: 20px;
+    margin: 8px 0;
   }
 `;
 

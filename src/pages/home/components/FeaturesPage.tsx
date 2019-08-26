@@ -99,7 +99,7 @@ Cell.Title = styled.h3<{ reversed: boolean }>`
   font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: 22px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   @media (min-width: ${layoutBreak}px) {
     text-align: ${props => (props.reversed ? "right" : "left")};
     font-weight: 600;

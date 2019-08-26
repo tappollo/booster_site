@@ -232,7 +232,7 @@ PowerBy.Firebase = styled.img.attrs({
 
 export const WithWithoutBooster = () => {
   return (
-    <div style={{ backgroundColor: "#06142C", marginBottom: 20 }}>
+    <div style={{ backgroundColor: "#06142C", marginBottom: 60 }}>
       <Content>
         <WithWithoutBooster.Container>
           <WithWithoutBooster.Row>
