@@ -231,41 +231,38 @@ PowerBy.Firebase = styled.img.attrs({
   margin-right: 8px;
 `;
 
-const WithWithoutBooster = () => {
+export const WithWithoutBooster = () => {
   return (
-    <WithWithoutBooster.Container>
-      <WithWithoutBooster.Background />
-      <WithWithoutBooster.Row>
-        <WithWithoutBooster.Head>
-          <WithWithoutBooster.Square style={{ backgroundColor: "#660C6E" }} />
-          <WithWithoutBooster.TitleWithout>
-            Without Booster
-          </WithWithoutBooster.TitleWithout>
-        </WithWithoutBooster.Head>
-        <WithWithoutBooster.WithoutBoosterImage />
-      </WithWithoutBooster.Row>
-      <WithWithoutBooster.Row>
-        <WithWithoutBooster.Head>
-          <WithWithoutBooster.Square style={{ backgroundColor: "#FF00C9" }} />
-          <WithWithoutBooster.TitleWith>
-            With Booster
-          </WithWithoutBooster.TitleWith>
-        </WithWithoutBooster.Head>
-        <WithWithoutBooster.WithBoosterImage />
-      </WithWithoutBooster.Row>
-    </WithWithoutBooster.Container>
+    <div style={{ backgroundColor: "#06142C", marginBottom: 20 }}>
+      <Content>
+        <WithWithoutBooster.Container>
+          <WithWithoutBooster.Row>
+            <WithWithoutBooster.Head>
+              <WithWithoutBooster.Square
+                style={{ backgroundColor: "#660C6E" }}
+              />
+              <WithWithoutBooster.TitleWithout>
+                Without Booster
+              </WithWithoutBooster.TitleWithout>
+            </WithWithoutBooster.Head>
+            <WithWithoutBooster.WithoutBoosterImage />
+          </WithWithoutBooster.Row>
+          <WithWithoutBooster.Row>
+            <WithWithoutBooster.Head>
+              <WithWithoutBooster.Square
+                style={{ backgroundColor: "#FF00C9" }}
+              />
+              <WithWithoutBooster.TitleWith>
+                With Booster
+              </WithWithoutBooster.TitleWith>
+            </WithWithoutBooster.Head>
+            <WithWithoutBooster.WithBoosterImage />
+          </WithWithoutBooster.Row>
+        </WithWithoutBooster.Container>
+      </Content>
+    </div>
   );
 };
-
-WithWithoutBooster.Background = styled.div`
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  transform: scaleX(3);
-`;
 
 WithWithoutBooster.Container = styled.div`
   position: relative;
@@ -346,7 +343,6 @@ const WhoWeArePage = () => {
           <WhoWeAreAnimation />
         </Right>
       </Container>
-      <WithWithoutBooster />
     </Content>
   );
 };

@@ -138,6 +138,7 @@ Cell.Subtitle = styled.p`
   font-family: "Hind Guntur", sans-serif;
   font-size: 15px;
   text-align: center;
+  line-height: 20px;
   @media (min-width: ${layoutBreak}px) {
     text-align: left;
   }
