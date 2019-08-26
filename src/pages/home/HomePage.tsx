@@ -12,7 +12,7 @@ export default () => (
     <WhoWeArePage />
     <WithWithoutBooster />
     <BenefitsPage />
-    <SectionTitle>Prebuilt components</SectionTitle>
+    <SectionTitle id="features">Prebuilt components</SectionTitle>
     <ImageBackground>
       <FeaturesPage />
       <GithubButton />

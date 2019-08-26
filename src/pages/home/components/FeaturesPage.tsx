@@ -146,7 +146,7 @@ export const SectionTitle = styled.h1`
 
 const FeaturesPage = () => {
   return (
-    <Content id="features">
+    <Content>
       {features.map((feature, index) => (
         <Cell key={index} feature={feature} reversed={index % 2 === 1} />
       ))}
