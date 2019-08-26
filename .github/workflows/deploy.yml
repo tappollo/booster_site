@@ -1,0 +1,26 @@
+name: CD
+
+on: [push]
+
+push:
+  branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          version: 10
+      - name: build
+        run: |
+          yarn install
+          yarn build
+      - uses: nchaulet/github-action-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLIC_PATH: build
