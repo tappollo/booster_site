@@ -104,8 +104,13 @@ const Cell = (props: {
     });
     return () => {
       Lottie.destroy(props.benefit.title);
-    }
-  }, [props.benefit.assetPath, props.benefit.animation, mobileLayout]);
+    };
+  }, [
+    props.benefit.assetPath,
+    props.benefit.animation,
+    props.benefit.title,
+    mobileLayout
+  ]);
   useEffect(() => {
     if (props.active) {
       animation.current!.goToAndPlay(0);
@@ -130,16 +135,17 @@ const Cell = (props: {
 };
 
 Cell.Subtitle = styled.p`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-size: 15px;
   text-align: center;
+  line-height: 20px;
   @media (min-width: ${layoutBreak}px) {
     text-align: left;
   }
 `;
 
 Cell.Title = styled.h2`
-  font-family: "SF Compact Display", sans-serif;
+  font-family: "Hind Guntur", sans-serif;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 5px;
