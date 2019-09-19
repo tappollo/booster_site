@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/booster_site/static/css/main.294922be.chunk.css",
+    "main.js": "/booster_site/static/js/main.0c2df135.chunk.js",
+    "main.js.map": "/booster_site/static/js/main.0c2df135.chunk.js.map",
+    "runtime~main.js": "/booster_site/static/js/runtime~main.bbd24c95.js",
+    "runtime~main.js.map": "/booster_site/static/js/runtime~main.bbd24c95.js.map",
+    "static/js/2.2c156a8f.chunk.js": "/booster_site/static/js/2.2c156a8f.chunk.js",
+    "static/js/2.2c156a8f.chunk.js.map": "/booster_site/static/js/2.2c156a8f.chunk.js.map",
+    "index.html": "/booster_site/index.html",
+    "precache-manifest.e154f5c7f863d72b56427a64e61d5c3f.js": "/booster_site/precache-manifest.e154f5c7f863d72b56427a64e61d5c3f.js",
+    "service-worker.js": "/booster_site/service-worker.js",
+    "static/css/main.294922be.chunk.css.map": "/booster_site/static/css/main.294922be.chunk.css.map",
+    "static/media/Github.png": "/booster_site/static/media/Github.6e81d444.png",
+    "static/media/chat.png": "/booster_site/static/media/chat.b1af9817.png",
+    "static/media/chat@2x.png": "/booster_site/static/media/chat@2x.6fb0f4c9.png",
+    "static/media/coming@2x.png": "/booster_site/static/media/coming@2x.40bd2408.png",
+    "static/media/company.png": "/booster_site/static/media/company.0024e8d4.png",
+    "static/media/image.png": "/booster_site/static/media/image.178a1778.png",
+    "static/media/image@2x.png": "/booster_site/static/media/image@2x.e19e20f8.png",
+    "static/media/line_background.svg": "/booster_site/static/media/line_background.d40a8234.svg",
+    "static/media/login.png": "/booster_site/static/media/login.cc9b6890.png",
+    "static/media/login@2x.png": "/booster_site/static/media/login@2x.b8b06173.png",
+    "static/media/settings.png": "/booster_site/static/media/settings.118c977a.png",
+    "static/media/settings@2x.png": "/booster_site/static/media/settings@2x.8a74bc87.png",
+    "static/media/video.png": "/booster_site/static/media/video.f8009280.png",
+    "static/media/video@2x.png": "/booster_site/static/media/video@2x.324a771f.png",
+    "static/media/with-booster-graph@2x.png": "/booster_site/static/media/with-booster-graph@2x.970ccd1a.png",
+    "static/media/without-booster-graph@2x.png": "/booster_site/static/media/without-booster-graph@2x.de657dfe.png"
+  }
+}
