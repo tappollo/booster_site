@@ -330,8 +330,8 @@ const WhoWeArePage = () => {
     <Content>
       <Container
         style={{
-          minHeight: mobileLayout ? "none" : window.innerHeight - 40,
-          marginTop: mobileLayout ? 0 : 40
+          minHeight: mobileLayout ? "none" : window.innerHeight - 80,
+          marginTop: mobileLayout ? 0 : 80
         }}
       >
         <Left>
