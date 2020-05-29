@@ -11,14 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v1
         with:
           version: 10
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.3
+      - name: Install and Buil
+        run: |
+          yarn install
+          yarn build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         env:
           FOLDER: build
           BRANCH: gh-pages
-          BUILD_SCRIPT: yarn install && yarn build
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
