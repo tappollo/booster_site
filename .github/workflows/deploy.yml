@@ -16,7 +16,7 @@ jobs:
         with:
           version: 10
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@ghtoken
+        uses: JamesIves/github-pages-deploy-action@3.5.3
         env:
           FOLDER: build
           BRANCH: gh-pages
