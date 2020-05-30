@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "11491af05deda74784140935444c0f87",
+    "revision": "74d1d77275dc24dbe03a9d15d8fcdf70",
     "url": "/booster_site/index.html"
   },
   {
-    "revision": "bf9b7c2595bafd3c58cb",
-    "url": "/booster_site/static/css/main.294922be.chunk.css"
+    "revision": "c6d32cbf32406c63b8d7",
+    "url": "/booster_site/static/css/main.6c39c408.chunk.css"
   },
   {
-    "revision": "ec7832a4bfc9025d9ddd",
-    "url": "/booster_site/static/js/2.2c156a8f.chunk.js"
+    "revision": "4f91349b5c0de145ea1a",
+    "url": "/booster_site/static/js/2.282e032c.chunk.js"
   },
   {
-    "revision": "bf9b7c2595bafd3c58cb",
-    "url": "/booster_site/static/js/main.0c2df135.chunk.js"
+    "revision": "c2a3039178285b23fc806de80725ba54",
+    "url": "/booster_site/static/js/2.282e032c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "60c64647ed88c36352c9",
-    "url": "/booster_site/static/js/runtime~main.bbd24c95.js"
+    "revision": "c6d32cbf32406c63b8d7",
+    "url": "/booster_site/static/js/main.7a889072.chunk.js"
+  },
+  {
+    "revision": "17d7f9950986ea5dd6d6",
+    "url": "/booster_site/static/js/runtime-main.02ec1a26.js"
   },
   {
     "revision": "6e81d4443a8622318dec68a46ca462c6",
